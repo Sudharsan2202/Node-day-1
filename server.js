@@ -38,6 +38,7 @@ app.post("/createFile", async (req, res) => {
 
 // Endpoint to retrieve all text files
 app.get("/getFiles", async (req, res) => {
+  
   try {
     await fs.ensureDir(folderPath);
     const files = await fs.readdir(folderPath);
